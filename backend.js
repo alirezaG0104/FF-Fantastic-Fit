@@ -8,8 +8,43 @@
 // 4. Sepak takraw
 // 5. Tarung derajat
 
+// return all students
+function getAllUsers() {
+  const usersObject = [
+    {
+      username: 'cihuy1@gmail.com',
+      name: 'cihuy',
+      name: 'abc1',
+      age: 18,
+      scheduleID: ['FIBA-Thu-08'],
+    },
+    {
+      username: 'cihuy2@gmail.com',
+      name: 'cihuy',
+      name: 'abc2',
+      age: 18,
+      scheduleID: ['FIBA-Thu-08'],
+    },
+    {
+      username: 'cihuy3@gmail.com',
+      name: 'cihuy',
+      name: 'abc3',
+      age: 18,
+      scheduleID: ['FIBA-Thu-08'],
+    },
+    {
+      username: 'cihuy4@gmail.com',
+      name: 'cihuy',
+      name: 'abc4',
+      age: 18,
+      scheduleID: ['FIBA-Thu-08'],
+    },
+  ];
+  return usersObject;
+}
+
 // return all courses
-function readCourses() {
+function getAllCourses() {
   const courseObject = [
     {
       name: 'Bola basket',
@@ -225,53 +260,16 @@ function readCourses() {
   return courseObject;
 }
 
-// return all students
-function readStudents() {
-  const studentObject = [
-    {
-      username: 'cihuy1@gmail.com',
-      name: 'cihuy',
-      name: 'abc1',
-      age: 18,
-      scheduleId: ['FIBA-Thu-08'],
-    },
-    {
-      username: 'cihuy2@gmail.com',
-      name: 'cihuy',
-      name: 'abc2',
-      age: 18,
-      scheduleId: ['FIBA-Thu-08'],
-    },
-    {
-      username: 'cihuy3@gmail.com',
-      name: 'cihuy',
-      name: 'abc3',
-      age: 18,
-      scheduleId: ['FIBA-Thu-08'],
-    },
-    {
-      username: 'cihuy4@gmail.com',
-      name: 'cihuy',
-      name: 'abc4',
-      age: 18,
-      scheduleId: ['FIBA-Thu-08'],
-    },
-  ];
-  return studentObject;
-}
-
 // return all carts
-function readCarts() {
+function getAllCarts() {
   const cartObject = [
     {
-      id: 'abc3-cihuy3',
-      username: 'cihuy3@gmail.com',
+      email: 'cihuy2@gmail.com',
       scheduleID: ['FIBA-Mon-08', 'FIBA-Thu-08'],
       totalPrice: 0,
     },
     {
-      id: 'abc4-cihuy4',
-      username: 'cihuy3@gmail.com',
+      email: 'cihuy3@gmail.com',
       scheduleID: ['FIBA-Mon-08'],
       totalPrice: 0,
     },
@@ -279,24 +277,86 @@ function readCarts() {
   return cartObject;
 }
 
-// read specific user cart
-function readUserCart() {
-  const cartObject = [
-    {
-      id: 'abc3-cihuy3',
-      username: 'cihuy3@gmail.com',
-      scheduleID: ['FIBA-Mon-08', 'FIBA-Thu-08'],
-      totalPrice: 0,
-    },
-    {
-      id: 'abc4-cihuy4',
-      username: 'cihuy3@gmail.com',
-      scheduleID: ['FIBA-Mon-08'],
-      totalPrice: 0,
-    },
-  ];
-  return cartObject;
+function getUserCart(email) {
+  const allCarts = getAllCarts();
+  for (let i = 0; i < allCarts.length; i++) {
+    if (email === allCarts[i].email) {
+      return allCarts[i];
+    }
+  }
 }
+// console.log(getUserCart('cihuy2@gmail.com'));
+
+function getTotalCart(email) {
+  const userCart = getUserCart(email);
+  return userCart.scheduleID.length;
+}
+
+function getCourse(courseId) {
+  // ambil semua course
+  const allCourse = getAllCourses();
+  let indexCourse = 0;
+  for (let i = 0; i < allCourse.length; i++) {
+    // console.log(allCourse[i].schedule);
+    /*
+    [
+      { day: 'monday', information: [ [Object] ] },
+      { day: 'thursday', information: [ [Object], [Object] ] }
+    ]
+    */
+    for (let j = 0; j < allCourse[i].schedule.length; j++) {
+      // console.log(allCourse[i].schedule[j].information);
+      /*
+      [
+        {
+          id: 'KODR-Mon-08',
+          coach: 'Roy Williams',
+          hour: '08.00-10.00',
+          totalStudents: 0
+        }
+      ]
+      */
+      for (let k = 0; k < allCourse[i].schedule[j].information.length; k++) {
+        if (courseId === allCourse[i].schedule[j].information[k].id) {
+          return allCourse[i];
+        }
+      }
+    }
+  }
+}
+// console.log(getCourse('KODR-Thu-10'));
+
+function addNewCourseToCart(courseId, email) {
+  // baca semua data cart
+  const allCarts = getAllCarts();
+  // console.log(allCarts);
+
+  const obj = {};
+  obj.email = email;
+
+  const arr = [];
+  arr.push(courseId);
+
+  obj.scheduleID = arr;
+
+  const course = getCourse(courseId);
+  obj.totalPrice = course.price;
+
+  allCarts.push(obj);
+  // console.log(obj);
+}
+addNewCourseToCart('FIBA-Mon-08', 'cihuy6@gmail.com');
+
+function getUser(email) {
+  const allUsers = getAllUsers();
+
+  for (let i = 0; i < allUsers.length; i++) {
+    if (allUsers[i].username === email) {
+      return allUsers[i];
+    }
+  }
+}
+// console.log(getUser('cihuy2@gmail.com'));
 
 // create new user
 function createUser(arrayUser) {
@@ -305,48 +365,13 @@ function createUser(arrayUser) {
     password: arrayUser[1],
     name: arrayUser[2],
     age: arrayUser[3],
-    scheduleId: [],
+    scheduleID: [],
   };
 
-  const studentObject = readStudents();
-
-  studentObject.push(obj);
-  console.log(studentObject);
+  const allUsers = getAllUsers();
+  allUsers.push(obj);
+  // console.log(allUsers);
 }
 createUser(['rizki', 'mantep', 'qwer', 18]);
-
-// delete user (NOT YET)
-// function deleteUser() {}
-
-// create new cart (NOT YET)
-function addToCart(objCourse) {
-  const courseObject = readCarts();
-  const obj = {
-    id: 'cihuy',
-    username: objCourse.name,
-    scheduleID: [],
-    totalPrice: 0,
-    // username: arrayUser[0],
-    // password: arrayUser[1],
-    // name: arrayUser[2],
-    // age: arrayUser[3],
-    // scheduleId: [],
-  };
-  console.log(obj);
-}
-const objCourse = {
-  name: 'Tarung derajat',
-  price: 75000,
-  organization: 'KODRAT',
-  day: 'monday',
-  id: 'KODR-Mon-08',
-  coach: 'Roy Williams',
-  hour: '08.00-10.00',
-  totalStudents: 0,
-};
-addToCart(objCourse);
-
-// delete cart item per user (NOT YET)
-function deleteCart() {}
 
 console.log(0);
