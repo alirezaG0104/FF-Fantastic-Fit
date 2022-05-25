@@ -227,25 +227,55 @@ const studentObject = [
   {
     username: 'cihuy1@gmail.com',
     name: 'cihuy',
+    name: 'abc1',
     age: 18,
     scheduleId: ['FIBA-Thu-08'],
   },
   {
     username: 'cihuy2@gmail.com',
     name: 'cihuy',
+    name: 'abc2',
     age: 18,
     scheduleId: ['FIBA-Thu-08'],
   },
   {
     username: 'cihuy3@gmail.com',
     name: 'cihuy',
+    name: 'abc3',
     age: 18,
     scheduleId: ['FIBA-Thu-08'],
   },
   {
     username: 'cihuy4@gmail.com',
     name: 'cihuy',
+    name: 'abc4',
     age: 18,
     scheduleId: ['FIBA-Thu-08'],
   },
 ];
+
+const cartObject = [
+  {
+    id: 'abc3-cihuy3',
+    username: 'cihuy3@gmail.com',
+    scheduleID: [],
+    totalPrice: 0,
+  },
+  {
+    id: 'abc4-cihuy4',
+    username: 'cihuy3@gmail.com',
+    scheduleID: [],
+    totalPrice: 0,
+  },
+];
+
+function createStudent(arrayUser) {
+  const obj = {
+    username: arrayUser[0],
+    password: arrayUser[1],
+    name: arrayUser[2],
+    age: arrayUser[3],
+    scheduleId: [],
+  };
+  studentObject.push(obj);
+}
