@@ -3,6 +3,10 @@
     font-family: poppins-medium ;
     src: url(./Font/Poppins/Poppins-Medium.ttf);
 }
+@font-face {
+    font-family: poppins-light;
+    src: url(Font/Poppins/Poppins-Light.ttf);
+}
 body{
     background-color: #F5F6F6;
     font-family: poppins-medium ;
@@ -28,7 +32,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: poppins-medium ;
+	font-family: poppins-light ;
 	vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, 
@@ -139,3 +143,17 @@ html {
     color: #dd4b39;
     box-shadow: 0 0 24px 0 #dd4b39;
   }
+
+  
+
+  #Bal, #Soc, #PS, #ST {
+    width: 76%;
+    margin-left: 55px;
+  }
+  
+  #TD{
+      width: 57%;
+      margin-left: 55px;
+  }
+
+  
