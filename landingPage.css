@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: poppins-medium ;
     src: url(./Font/Poppins/Poppins-Medium.ttf);
@@ -53,6 +52,29 @@ footer, header, hgroup, menu, nav, section {
 
 .btn-primary {
     background-color: #3481EF;
+}
+
+#banner { /* BUAT TEST DOANK */
+  width: 100%;
+  height: 500px;
+  background-color: #e0e0e0;
+}
+
+#content {
+  max-width: 780px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 3rem;
+  background-color: #e0e0e0;
+}
+
+.social-icon {
+  color: #000;
 }
 
 html {
