@@ -1,3 +1,15 @@
+
+@font-face {
+    font-family: poppins-medium ;
+    src: url(./Font/Poppins/Poppins-Medium.ttf);
+}
+body{
+    background-color: #F5F6F6;
+    font-family: poppins-medium ;
+   margin: 0vw 5vw 0vw 5vw;
+}
+
+
 /*=== RESET CSS ===*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,11 +45,6 @@ footer, header, hgroup, menu, nav, section {
 /* abu : #979797  */
 /* putih bg : #F5F6F6  */
 
-body {
-    background-color: #f5f6f6;
-    color: #000;
-    font-family: Helvetica Neue, Helvetica, sans-serif;
-}
 
 .card {
     border: none;
