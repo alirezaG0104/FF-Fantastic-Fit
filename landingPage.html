@@ -155,7 +155,7 @@
 <!-- MODAL -->
 
 <script src="./backend.js"></script>
-<script>
+<!-- <script>
   function addCourses() {
 
     var i=0;
@@ -166,6 +166,7 @@
       if (i === 0) row.className="row";
       else if (i === 1) row.className="row mt-3";
       // row.innerText='row'
+      
 
       for (let j=0; j<3; j++) {  
 
@@ -174,14 +175,15 @@
         row.appendChild(col)
 
         var card = document.createElement('div');
-        card.className="card shadow-sm rounded-4";
+        card.className="card shadow-sm rounded-4 zoom";
         col.appendChild(card);
 
         var img = document.createElement('img');
         img.className = "card-img-top rounded-4";
 
         var cardTitle = document.createElement('h5');
-
+        
+        
         if(i === 0 && j === 0){
           img.src="img/basketball.png";
           img.alt="Coach Basketball";
@@ -270,7 +272,7 @@
     // todoRow.append(todoButtonItem, todoItem);
   }
   addCourses();
-</script>
+</script> -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>

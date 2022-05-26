@@ -358,7 +358,7 @@ h2{
   width: 250px;
 }
 
-<<<<<<< HEAD
+
 
 
 #bawahan {
@@ -387,7 +387,7 @@ h2{
 
 .zoom:hover {
   transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-=======
+}
 /* .btn-next{
   background-color: #3481ef;
   color: white;
@@ -524,5 +524,4 @@ button:hover .button-text {
   justify-content: center;
   color: #fff;
   padding: 10px;
->>>>>>> c75a8bf632164d1f155f179bfc54ab13a48f4159
 }
