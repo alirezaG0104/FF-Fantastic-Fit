@@ -22,7 +22,7 @@
             <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
           </ul>
 
-          <a href="#" id="btn-cart"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/></svg></a>
+          <a href="#" id="myBtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/></svg></a>
           
           <button class="btn btn-outline-secondary" type="submit" style="border: none; ">Login</button>/<button class="btn btn-outline-secondary" type="submit" style="border: none;">Sign Up</button>
 
@@ -109,41 +109,104 @@
         -->
     </main>
 
+    <nav id="nav-bottom">
+      <button class="btn-next">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Next Page</span>
+      </button>
+    </nav>
+
     <footer class="border-top">
       <div class="footer-child">
-        <div class="discoverCol">
-          <span style="margin-right: 5px; margin-left: 5px; " >Discover All Collections</span>
-          <img class="logoS" src="assets/football.png" alt="">
-          <img class="logoS" src="assets/sports.png" alt="">
-          <img class="logoS" src="assets/trophy.png" alt="">
-          <img class="logoS" src="assets/sepak-takraw.png" alt="">
+        <h4 class="border-bottom">FantasticFit</h4>
+        <ul>
+          <li>Karir</li>
+          <li>Kekayaan Intelektual</li>
+          <li>Blog</li>
+          <li>yggu</li>
+          <li>Lima</li>
+        </ul>
+      </div>
+      <div class="footer-child">
+        <h4 class="border-bottom">Discover All Collections</h4>
+        <div class="d-flex justify-content-center">
+          <a href="#"><img class="logoS" src="assets/football.png" alt=""></a>
+          <a href="#"><img class="logoS" src="assets/sports.png" alt=""></a>
+          <a href="#"><img class="logoS" src="assets/trophy.png" alt=""></a>
+          <a href="#"><img class="logoS" src="assets/sepak-takraw.png" alt=""></a>
         </div>
       </div>
       <div class="footer-child">
-        <button class="btn-next">
-          <span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="button-text">Next Page</span>
-        </button>
-      </div>
-      <div class="footer-child">
-        <div class="toggle"> 
-          <input type="radio" name="toggle" id="toggle-1"/>
-          <label class="label-1" for="toggle-1">1</label>
-          <input type="radio" name="toggle" id="toggle-2"/>
-          <label class="label-2" for="toggle-2">2</label>
-        </div>
+        <ul>
+          <li><a href="#"><img class="icon-app" src="assets/ff-android.svg" alt=""></a></li>
+          <li><a href="#"><img class="icon-app" src="assets/ff-ios.svg" alt=""></a></li>
+        </ul>
       </div>
 
     
     </footer>
 
 <!-- MODAL  -->
+<div id="myModal" class="modal">
 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Cart</h2>
+    </div>
+    <div class="modal-body">
+      <h3 class="text-center">Hallo</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias in odio nihil hic rem temporibus odit laudantium provident quia dolorem laboriosam inventore quaerat ex saepe dolores numquam est, nulla amet?</p>
+      <div class="payment-page">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <a href="#" class="btn btn-primary d-block m-auto"><i class="fa-solid fa-credit-card"></i> LANJUT PEMBAYARAN</a>
+
+
+    </div>
+    <div class="modal-footer">
+      <p>Footer</p>
+    </div>
+  </div>
+
+</div>
 <!-- MODAL -->
 
 <script src="./backend.js"></script>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
 <script>
   function addCourses() {
 
