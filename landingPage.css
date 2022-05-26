@@ -87,6 +87,17 @@ footer {
   padding: 3rem;
   background-color: #e0e0e0;
 }
+.footer-child{
+  
+  width: 200px;
+  align-items: center;
+}
+
+
+.logoS{
+  width: 30px;
+  margin: 5px;
+}
 
 .social-icon {
   color: #000;
