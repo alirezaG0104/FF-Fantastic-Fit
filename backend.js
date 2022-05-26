@@ -48,7 +48,8 @@ function getAllCourses() {
   const courseObject = [
     {
       name: 'Bola basket',
-      price: 75000,
+      price: 70000,
+      img: "img/basketball.png",
       organization: 'FIBA',
       schedule: [
         {
@@ -71,63 +72,75 @@ function getAllCourses() {
               hour: '08.00-10.00',
               totalStudents: 0,
             },
+          ],
+        },
+        {
+          day: 'saturday',
+          information: [
             {
-              id: 'FIBA-Thu-10',
-              coach: 'Billy Donovan',
-              hour: '19.00-21.00',
-              totalStudents: 3,
+              id: 'FIBA-Sat-10',
+              coach: 'Jay Wright',
+              hour: '10.00-12.00',
+              totalStudents: 0,
             },
           ],
         },
-      ],
+      ]
     },
     {
       name: 'Sepak bola',
-      price: 75000,
+      price: 70000,
+      img: "assets/—Pngtree—football player_1795041.png",
       organization: 'FIFA',
       schedule: [
         {
           day: 'monday',
           information: [
             {
-              id: 'FIFA-Mon-08',
-              coach: 'Roy Williams',
+              id: 'FIFA-Mon-14',
+              coach: 'Bambang Suprit',
+              hour: '14.00-16.00',
+              totalStudents: 0,
+            },
+          ],
+        },
+        {
+          day: 'wednesday',
+          information: [
+            {
+              id: 'FIFA-Web-08',
+              coach: 'David Div',
               hour: '08.00-10.00',
               totalStudents: 0,
             },
           ],
         },
         {
-          day: 'thursday',
+        day: 'friday',
           information: [
             {
-              id: 'FIFA-Thu-08',
-              coach: 'Jay Wright',
-              hour: '08.00-10.00',
+              id: 'FIFA-Fri-15',
+              coach: 'David Div',
+              hour: '15.00-17.00',
               totalStudents: 0,
             },
-            {
-              id: 'FIFA-Thu-10',
-              coach: 'Billy Donovan',
-              hour: '19.00-21.00',
-              totalStudents: 3,
-            },
           ],
-        },
-      ],
+        }
+      ]
     },
     {
       name: 'Pencak silat',
       price: 75000,
-      organization: 'PERSILAT',
+      img: "assets/pencak-silat.png",
+      organization: 'PERSILATAN BAJA HITAM',
       schedule: [
         {
-          day: 'monday',
+          day: 'tuesday',
           information: [
             {
-              id: 'PERS-Mon-08',
-              coach: 'Roy Williams',
-              hour: '08.00-10.00',
+              id: 'PERS-Tue-19',
+              coach: 'Pladimir Putin',
+              hour: '19.00-21.00',
               totalStudents: 0,
             },
           ],
@@ -137,23 +150,29 @@ function getAllCourses() {
           information: [
             {
               id: 'PERS-Thu-08',
-              coach: 'Jay Wright',
+              coach: 'Jay Satrio',
               hour: '08.00-10.00',
               totalStudents: 0,
             },
-            {
-              id: 'PERS-Thu-10',
-              coach: 'Billy Donovan',
-              hour: '19.00-21.00',
-              totalStudents: 3,
-            },
           ],
         },
-      ],
+        {
+          day: 'saturday',
+          information: [
+            {
+              id: 'PERS-Sat-08',
+              coach: 'Limbad jr',
+              hour: '08.00-10.00',
+              totalStudents: 0,
+            },
+          ],
+        }
+      ]
     },
     {
       name: 'Ballet',
-      price: 75000,
+      price: 100000,
+      img:"assets/ballet.png",
       organization: 'BALL',
       schedule: [
         {
@@ -161,7 +180,18 @@ function getAllCourses() {
           information: [
             {
               id: 'BALL-Mon-08',
-              coach: 'Roy Williams',
+              coach: 'Maja Skavoski',
+              hour: '08.00-10.00',
+              totalStudents: 0,
+            },
+          ],
+        },
+        {
+          day: 'tuesday',
+          information: [
+            {
+              id: 'BALL-Tue-08',
+              coach: 'Jay Wright',
               hour: '08.00-10.00',
               totalStudents: 0,
             },
@@ -172,32 +202,27 @@ function getAllCourses() {
           information: [
             {
               id: 'BALL-Thu-08',
-              coach: 'Jay Wright',
-              hour: '08.00-10.00',
+              coach: 'Carlina Cilacap',
+              hour: '09.00-11.00',
               totalStudents: 0,
             },
-            {
-              id: 'BALL-Thu-10',
-              coach: 'Billy Donovan',
-              hour: '19.00-21.00',
-              totalStudents: 3,
-            },
-          ],
+         ],
         },
-      ],
+      ]
     },
     {
       name: 'Sepak takraw',
       price: 75000,
+      img: "assets/sepaktakraw.png",
       organization: 'ISTAF',
       schedule: [
         {
           day: 'monday',
           information: [
             {
-              id: 'ISTA-Mon-08',
-              coach: 'Roy Williams',
-              hour: '08.00-10.00',
+              id: 'ISTA-Mon-19',
+              coach: 'Roy setiawan',
+              hour: '19.00-21.00',
               totalStudents: 0,
             },
           ],
@@ -207,58 +232,72 @@ function getAllCourses() {
           information: [
             {
               id: 'ISTA-Thu-08',
-              coach: 'Jay Wright',
+              coach: 'David Beckham',
               hour: '08.00-10.00',
               totalStudents: 0,
-            },
+            }
+          ],
+        },
+        {
+          day: 'friday',
+          information: [
             {
-              id: 'ISTA-Thu-10',
-              coach: 'Billy Donovan',
-              hour: '19.00-21.00',
-              totalStudents: 3,
+              id: 'ISTA-Thu-17',
+              coach: 'Christiano Ronaldo',
+              hour: '17.00-19.00',
+              totalStudents: 0,
             },
           ],
         },
-      ],
+      ]
     },
     {
       name: 'Tarung derajat',
       price: 75000,
+      img: "assets/boxer_tarung_derajat_by_sihabudin_ae_d88fjs0-fullview-removebg-preview.png",
       organization: 'KODRAT',
       schedule: [
         {
-          day: 'monday',
+          day: 'tuesday',
           information: [
             {
-              id: 'KODR-Mon-08',
-              coach: 'Roy Williams',
-              hour: '08.00-10.00',
+              id: 'KODR-Tue-20',
+              coach: 'DS Rizky',
+              hour: '20.00-22.00',
               totalStudents: 0,
             },
           ],
         },
         {
-          day: 'thursday',
+          day: 'friday',
           information: [
             {
-              id: 'KODR-Thu-08',
-              coach: 'Jay Wright',
-              hour: '08.00-10.00',
+              id: 'KODR-Fri-15',
+              coach: 'DS Rizky',
+              hour: '15.00-17.00',
               totalStudents: 0,
-            },
-            {
-              id: 'KODR-Thu-10',
-              coach: 'Billy Donovan',
-              hour: '19.00-21.00',
-              totalStudents: 3,
             },
           ],
         },
-      ],
-    },
-  ];
+        {
+          day: 'saturday',
+          information: [
+            {
+              id: 'KODR-Sat-08',
+              coach: 'DS Rizky',
+              hour: '08.00-10.00',
+              totalStudents: 0,
+            }
+          ]
+        }
+      ]
+    }
+  ]
   return courseObject;
-}
+}  
+      
+
+
 
 // return all carts
 function getAllCarts() {
