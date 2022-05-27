@@ -578,6 +578,7 @@ button:hover .button-text {
 
 /* Modal Content */
 .modal-content {
+  max-width: 680px;
   position: relative;
   background-color: #fefefe;
   margin: auto;
