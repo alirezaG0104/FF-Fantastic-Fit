@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="landingPage.css">
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <title>Yo</title>
 </head>
 <body>
     <header>
       <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="assets/logo1.png" alt="logo" width="80px"></a>
+          <a class="navbar-brand" ><img src="assets/logo1.png" alt="logo" width="80px"></a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link text-secondary" href="#">About us</a></li>
+              <a href=""></a>
+            <li class="nav-item"><a class="nav-link text-secondary tooltip-bottom" data-tooltip="kotak background tidak dinamis dsaf dasvarva asdvasr asdvasevasd " href="#" >Find us</a></li>
             <li class="nav-item"><a class="nav-link text-secondary" href="#">Schedule</a></li>
           </ul>
           
@@ -407,6 +410,8 @@ window.onclick = function(event) {
 </script>
 <script>
 
+    
+
   function renderCourses(){
 
     // input = document.getElementById("searchId");
@@ -421,11 +426,11 @@ window.onclick = function(event) {
 
       temp = `
       <div class="col-md-4">
-        <div class="card shadow-sm rounded-4 zoom">
-            <img src="${data[i].img}" class="card-img-top rounded-4">
+        <div class="card shadow-sm rounded-4 zoom" style="margin-bottom: 1vw;">
+            <img src="${data[i].img}" class="card-img-top rounded-4" id="${data[i].namaidcss}">
             <div class="card-body">
               <h5 class="card-title text-center">${data[i].name.substring(0,1)}<span class="buntutletter">${data[i].name.substring(1)}</span></h5>
-              <a type="button" class="btn btn-primary d-block m-auto"><i class="fa-solid fa-plus"></i> ORDER</a>
+              <a class="btn btn-primary d-block m-auto"><i class="fa-solid fa-plus"></i> ORDER</a>
             </div>
         </div>
       </div>`
@@ -443,11 +448,11 @@ window.onclick = function(event) {
     result.forEach(el => {
       temp += 
       `<div class="col-md-4">
-        <div class="card shadow-sm rounded-4 zoom">
-            <img src="${el.img}" class="card-img-top rounded-4">
+        <div class="card shadow-sm rounded-4 zoom" style="margin-bottom: 1vw;">
+            <img src="${el.img}" class="card-img-top rounded-4" id="${el.namaidcss}">
             <div class="card-body">
               <h5 class="card-title text-center">${el.name.substring(0,1)}<span class="buntutletter">${el.name.substring(1)}</span></h5>
-              <a type="button" class="btn btn-primary d-block m-auto"><i class="fa-solid fa-plus"></i> ORDER</a>
+              <a class="btn btn-primary d-block m-auto"><i class="fa-solid fa-plus"></i> ORDER</a>
             </div>
         </div>
       </div>`;

@@ -83,3 +83,12 @@ function formData() {
     getlFormMulai.textContent = dataMulai
     getlFormHp.textContent = dataHp
 }
+
+
+// About us
+$(document).ready(function() {
+    $('[data-toggle="popover"]').popover({
+       placement: 'bottom',
+       trigger: 'hover'
+    });
+ });
