@@ -438,7 +438,7 @@ window.onclick = function(event) {
             <img src="${data[i].img}" class="card-img-top rounded-4" id="${data[i].namaidcss}">
             <div class="card-body">
               <h5 class="card-title text-center">${data[i].name.substring(0,1)}<span class="buntutletter">${data[i].name.substring(1)}</span></h5>
-              <a onclick="cartCheck()" class="btn btn-primary d-block m-auto"><i class="fa-solid fa-plus"></i> ORDER</a>
+              <a onclick="${cartCheck(i)}" class="btn btn-primary d-block m-auto"><i class="fa-solid fa-plus"></i> ORDER</a>
             </div>
         </div>
       </div>`
