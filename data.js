@@ -110,7 +110,7 @@
       {
         name: 'Pencak silat',
         price: 75000,
-        img: 'assets/card-balet.png',
+        img: 'assets/card-silat.png',
         organization: 'PERSILAT',
         schedule: [
           {
@@ -146,7 +146,7 @@
       {
         name: 'Ballet',
         price: 75000,
-        img: 'assets/card-silat.png',
+        img: 'assets/card-balet.png',
         namaidcss: "Bal",
         organization: 'BALL',
         schedule: [
