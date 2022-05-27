@@ -37,6 +37,7 @@
         name: 'Bola basket',
         price: 75000,
         img: 'assets/card-basketball.png',
+        namaidcss: "bas",
         organization: 'FIBA',
         schedule: [
           {
@@ -73,6 +74,7 @@
         name: 'Sepak bola',
         price: 75000,
         img: 'assets/card-soccer.png',
+        namaidcss: "Soc",
         organization: 'FIFA',
         schedule: [
           {
@@ -145,6 +147,7 @@
         name: 'Ballet',
         price: 75000,
         img: 'assets/card-silat.png',
+        namaidcss: "Bal",
         organization: 'BALL',
         schedule: [
           {
@@ -181,6 +184,7 @@
         name: 'Sepak takraw',
         price: 75000,
         img: 'assets/card-takraw.png',
+        namaidcss: "ST",
         organization: 'ISTAF',
         schedule: [
           {
@@ -217,6 +221,7 @@
         name: 'Tarung derajat',
         price: 75000,
         img: 'assets/card-tarung.png',
+        namaidcss: "TD",
         organization: 'KODRAT',
         schedule: [
           {
