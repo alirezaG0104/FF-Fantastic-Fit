@@ -237,13 +237,13 @@
         <div class="form-group row my-2">
           <label for="form-course" class="col-sm-2 col-form-label">Course</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="form-course" value="Basketball" disabled>
+            <input type="text" class="form-control" id="form-course" value="" disabled>
           </div>
         </div>
         <div class="form-group row my-2">
-          <label for="form-course" class="col-sm-2 col-form-label">Harga</label>
+          <label for="form-harga" class="col-sm-2 col-form-label">Harga</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="form-course" value="990000" disabled>
+            <input type="text" class="form-control" id="form-harga" value="" disabled>
           </div>
         </div>
         <div class="form-group row my-2">
@@ -438,7 +438,7 @@ window.onclick = function(event) {
             <img src="${data[i].img}" class="card-img-top rounded-4" id="${data[i].namaidcss}">
             <div class="card-body">
               <h5 class="card-title text-center">${data[i].name.substring(0,1)}<span class="buntutletter">${data[i].name.substring(1)}</span></h5>
-              <a onclick="${cartCheck(i)}" class="btn btn-primary d-block m-auto"><i class="fa-solid fa-plus"></i> ORDER</a>
+              <a onclick="cartCheck(${i})" class="btn btn-primary d-block m-auto"><i class="fa-solid fa-plus"></i> ORDER</a>
             </div>
         </div>
       </div>`

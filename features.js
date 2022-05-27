@@ -1,7 +1,12 @@
 let cartNotif = document.getElementById("cart-notif")
 
-function cartCheck() {
+function cartCheck(courseName, coursePrice) {
+    console.log(courseObject);
+    let nama = courseName
+    let price = coursePrice
     cartNotif.classList.remove("d-none")
+    document.getElementById("form-course").value = nama
+    document.getElementById("form-harga").value = price
 }
 
 function cartCancel() {
@@ -101,9 +106,9 @@ function formData() {
 
 
 // About us
-$(document).ready(function() {
-    $('[data-toggle="popover"]').popover({
-       placement: 'bottom',
-       trigger: 'hover'
-    });
- });
+// $(document).ready(function() {
+//     $('[data-toggle="popover"]').popover({
+//        placement: 'bottom',
+//        trigger: 'hover'
+//     });
+//  });
