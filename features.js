@@ -1,3 +1,18 @@
+let cartNotif = document.getElementById("cart-notif")
+
+function cartCheck() {
+    cartNotif.classList.remove("d-none")
+}
+
+function cartCancel() {
+    cartNotif.classList.add("d-none")
+    modal.style.display = "none";
+    getModal1.classList.remove("d-none");
+    getModal2.classList.add("d-none");
+    getModal3.classList.add("d-none");
+}
+
+
 // DARK-MODE
 function yoSwitch() {
     let getBody = document.body
