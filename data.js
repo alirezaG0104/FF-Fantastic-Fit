@@ -36,8 +36,8 @@
       {
         name: 'Bola basket',
         price: 75000,
+        img: 'assets/card-basketball.png',
         namaidcss: "bas",
-        img: './img/basketball.png',
         organization: 'FIBA',
         schedule: [
           {
@@ -73,7 +73,7 @@
       {
         name: 'Sepak bola',
         price: 75000,
-        img: 'assets/—Pngtree—football player_1795041.png',
+        img: 'assets/card-soccer.png',
         namaidcss: "Soc",
         organization: 'FIFA',
         schedule: [
@@ -110,8 +110,7 @@
       {
         name: 'Pencak silat',
         price: 75000,
-        img: 'assets/pencak-silat.png',
-        namaidcss: "PS",
+        img: 'assets/card-balet.png',
         organization: 'PERSILAT',
         schedule: [
           {
@@ -147,7 +146,7 @@
       {
         name: 'Ballet',
         price: 75000,
-        img: 'assets/ballet.png',
+        img: 'assets/card-silat.png',
         namaidcss: "Bal",
         organization: 'BALL',
         schedule: [
@@ -184,7 +183,7 @@
       {
         name: 'Sepak takraw',
         price: 75000,
-        img: 'assets/sepaktakraw.png',
+        img: 'assets/card-takraw.png',
         namaidcss: "ST",
         organization: 'ISTAF',
         schedule: [
@@ -221,7 +220,7 @@
       {
         name: 'Tarung derajat',
         price: 75000,
-        img: 'assets/boxer_tarung_derajat_by_sihabudin_ae_d88fjs0-fullview-removebg-preview.png',
+        img: 'assets/card-tarung.png',
         namaidcss: "TD",
         organization: 'KODRAT',
         schedule: [
