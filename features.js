@@ -1,7 +1,11 @@
 let cartNotif = document.getElementById("cart-notif")
 
-function cartCheck() {
+function cartCheck(courseName, coursePrice) {
+    let nama = courseName
+    let price = coursePrice
     cartNotif.classList.remove("d-none")
+    document.getElementById("form-course").value = nama
+    document.getElementById("form-harga").value = price
 }
 
 function cartCancel() {
@@ -10,8 +14,12 @@ function cartCancel() {
     getModal1.classList.remove("d-none");
     getModal2.classList.add("d-none");
     getModal3.classList.add("d-none");
+    document.getElementById("form-nama").value = ""
+    document.getElementById("form-hp").value = ""
+    document.getElementById("form-mulai").value = ""
+    document.getElementById("form-course").value = ""
+    document.getElementById("form-harga").value = ""
 }
-
 
 // DARK-MODE
 function yoSwitch() {
@@ -101,9 +109,9 @@ function formData() {
 
 
 // About us
-$(document).ready(function() {
-    $('[data-toggle="popover"]').popover({
-       placement: 'bottom',
-       trigger: 'hover'
-    });
- });
+// $(document).ready(function() {
+//     $('[data-toggle="popover"]').popover({
+//        placement: 'bottom',
+//        trigger: 'hover'
+//     });
+//  });
